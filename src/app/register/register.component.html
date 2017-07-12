@@ -1,0 +1,59 @@
+<div class="col-md-6 col-md-offset-3">
+    <h2>Register</h2>
+    <form [formGroup] = "signUpForm" (ngSubmit)="onSubmit()"> 
+        <div class="form-group">
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" class="form-control" name="firstname" formControlName="firstname" />
+        </div>
+         <div class="form-group">
+            <label for="lastname">lastname</label>
+            <input type="text" id="lastname" class="form-control" name="lastname" formControlName="lastname"/>
+        </div>
+         <div class="form-group">
+            <label for="email">email</label>
+            <input type="text" id="email" class="form-control" name="email" formControlName="email"/>
+        </div>
+         <div class="form-group">
+            <label for="password">password</label>
+            <input type="text" id="password" class="form-control" name="password" formControlName="password"/>
+        </div>
+         <div class="form-group">
+            <label for="confirmPassword">confirmPassword</label>
+            <input type="text" id="confirmPassword" class="form-control" name="confirmPassword" formControlName="confirmPassword"/>
+        </div>
+         <div class="form-group">
+            <label for="birthdate">birthdate</label>
+            <input type="text" id="birthdate" class="form-control" name="birthdate" />
+        </div>
+         <div class="form-group">
+            <label for="flatepurChaseDate">flatepurChaseDate</label>
+            <input type="text" id="flatepurChaseDate" class="form-control" name="flatepurChaseDate" />
+        </div>
+         <div class="form-group">
+            <label for="profilePic">profilePic</label>
+            <input type="text" id="profilePic" class="form-control" name="profilePic" />
+        </div>
+        <div class="form-group">
+            <label for="agreetoCondition">agreetoCondition</label>
+            <input type="text" id="agreetoCondition" class="form-control" name="agreetoCondition" />
+        </div>
+        <div class="form-group">
+            <label for="flateBlock">flateBlock</label>
+            <input type="text" id="flateBlock" class="form-control" name="flateBlock" />
+        </div>
+         <div class="form-group">
+            <label for="flateNo">flateNo</label>
+            <input type="text" id="flateNo" class="form-control" name="flateNo" />
+        </div>
+         <div class="form-group">
+            <label for="mobileNo">mobileNo</label>
+            <input type="text" id="mobileNo" class="form-control" name="mobileNo" />
+        </div>
+        
+       <button type="submit">Submit</button>
+       <a [routerLink]="['/login']" class="btn btn-link">Login</a>
+        <div class="form-group">
+           
+        </div>
+    </form>
+</div>
