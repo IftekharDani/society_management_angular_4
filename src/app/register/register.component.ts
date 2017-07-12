@@ -15,11 +15,11 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {
     this.signUpForm = new FormGroup({
-      firstname: new FormControl(null),
-      lastname: new FormControl(null),
-      email: new FormControl(null),
-      password: new FormControl(null),
-      confirmPassword: new FormControl(null),
+      firstname: new FormControl(null,Validators.required),
+      lastname: new FormControl(null,Validators.required),
+      email: new FormControl(null,[Validators.required]),
+      password: new FormControl(null,Validators.required),
+      confirmPassword: new FormControl(null,Validators.required),
       birthdate: new FormControl(null),
       flatepurChaseDate: new FormControl(null),
       profilePic: new FormControl(null),
@@ -38,7 +38,11 @@ onSubmit() {
                 firstname: this.signUpForm.value['firstname'],
                 email: this.signUpForm.value['email'],
                 password: this.signUpForm.value['password'],
-                confirmPassword:this.signUpForm.value['confirmPassword']
+                birthdate: this.signUpForm.value['birthdate'],
+                flatepurChaseDate: this.signUpForm.value['flatepurChaseDate'],
+                flateBlock: this.signUpForm.value['flateBlock'],
+                flateNumber: this.signUpForm.value['flateNumber'],
+                mobileNo: this.signUpForm.value['mobileNo'],
                
             };
           console.log(this.adduser);// adduser var contains all our form values. store it where you w

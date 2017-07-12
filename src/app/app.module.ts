@@ -11,6 +11,7 @@ import { HeaderComponent } from './header/header.component';
 import {AppRoutingModule} from './app-routing-module';
 import {UserService} from './services/user.service'
 import {AuthenticationService} from './services/auth.service'
+import { AuthGuard } from './guards/auth-guard';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,7 @@ import {AuthenticationService} from './services/auth.service'
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [UserService,AuthenticationService],
+  providers: [UserService,AuthenticationService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
